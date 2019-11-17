@@ -1,0 +1,212 @@
+{
+    "home" : {
+        "name": "home",
+        "view_type" : "StaticNoInput",
+        "title" : "",
+        "sub_title" : "",
+        "text" : "WP-CLI Like you have never WP-CLI'd before!!!.\nSelect an option below to begin.",
+        "has_progress_bar": false,
+        "has_action": false,
+        "is_threaded": false,
+        "action_class": "",
+        "action_method" : ""
+    },
+    "get_installations": {
+        "name": "Get Installations",
+        "view_type": "ApiRequestProgressBar",
+        "title": "",
+        "sub_title": "",
+        "text": "Obtaining List of Installations",
+        "has_progress_bar": true,
+        "has_action": true,
+        "is_threaded": true,
+        "action_class": "apis",
+        "action_method": "run_api",
+        "user_data": {
+            "api": "sysproc",
+            "class" : "Installations",
+            "method": "get_installations",
+            "skip_results_popup": true,
+            "after_action_view": "list_installations"
+        }
+
+    },
+    "list_installations": {
+        "name": "List Installations",
+        "view_type": "DisplayTableWithSelectRows",
+        "title": "WordPress Installations",
+        "sub_title": "",
+        "text": "Obtaining List of Installations",
+        "has_progress_bar": false,
+        "has_action": false,
+        "is_threaded": false,
+        "action_class": "",
+        "action_method": "",
+        "user_data": {
+            "box_width": 7,
+            "header_keys": "list_install_headers",
+            "table_data": {"api_vars": "sysproc", "key": "installations"},
+            "sel_action": {"action_class": "state", "action_method": "set_installation"}
+        }
+    },
+    "databases": {
+        "name": "databases",
+        "view_type": "StaticNoInput",
+        "title": "",
+        "sub_title": "",
+        "text": "Databases Placeholder",
+        "has_progress_bar": false,
+        "has_action": false,
+        "is_threaded": false,
+        "action_class": "",
+        "action_method": ""
+    },
+    "get_themes": {
+        "name": "Get Themes",
+        "view_type": "ApiRequestProgressBar",
+        "title": "",
+        "sub_title": "",
+        "text": "Obtaining List of Themes",
+        "has_progress_bar": true,
+        "has_action": true,
+        "is_threaded": true,
+        "action_class": "apis",
+        "action_method": "run_api",
+        "user_data": {
+            "api": "wpcli",
+            "class": "Themes",
+            "method": "get_themes",
+            "skip_results_popup": true,
+            "after_action_view": "list_themes"
+        }
+    },
+    "list_themes": {
+        "name": "List Themes",
+        "view_type": "DisplayTableWithSelectRows",
+        "title": "Installed Themes",
+        "sub_title": "",
+        "text": "Theme List",
+        "has_progress_bar": false,
+        "has_action": false,
+        "is_threaded": false,
+        "action_class": "",
+        "action_method": "",
+        "user_data": {
+            "box_width": 1,
+            "header_keys": "list_installed_themes",
+            "table_data": {
+                "api_vars": "wpcli",
+                "key": "themes"
+            },
+            "sel_action": {
+                "action_class": "themes",
+                "action_method": "theme_options"
+            }
+        }
+    },
+    "theme_options": {
+        "name": "theme_options",
+        "view_type": "StaticMenuPrompt",
+        "title": "Theme Options",
+        "sub_title": "",
+        "text": "Choose an Action to perform on the selected theme",
+        "has_progress_bar": false,
+        "sub_menus": [
+            "theme_options"
+        ],
+        "has_action": false,
+        "is_threaded": false,
+        "action_class": "",
+        "action_method": ""
+    },
+
+    "api_response_view": {
+        "name": "api_response_view",
+        "view_type": "ApiResponse",
+        "title": "",
+        "sub_title": "",
+        "text": "",
+        "sub_menus": [
+            "api_response_view"
+        ],
+        "has_progress_bar": false,
+        "has_action": false,
+        "is_threaded": false,
+        "action_class": "",
+        "action_method": ""
+    },
+
+    "plugins": {
+        "name": "plugins",
+        "view_type": "StaticNoInput",
+        "title": "",
+        "sub_title": "",
+        "text": "Plugins Placeholder",
+        "has_progress_bar": false,
+        "has_action": false,
+        "is_threaded": false,
+        "action_class": "",
+        "action_method": ""
+    },
+    "users": {
+        "name": "users",
+        "view_type": "StaticNoInput",
+        "title": "",
+        "sub_title": "",
+        "text": "Users Placeholder",
+        "has_progress_bar": false,
+        "has_action": false,
+        "is_threaded": false,
+        "action_class": "",
+        "action_method": ""
+    },
+    "wp_core": {
+        "name": "wp_core",
+        "view_type": "StaticNoInput",
+        "title": "",
+        "sub_title": "",
+        "text": "WP Core Placeholder",
+        "has_progress_bar": false,
+        "has_action": false,
+        "is_threaded": false,
+        "action_class": "",
+        "action_method": ""
+    },
+    "revert_changes": {
+        "name": "wpcore",
+        "view_type": "StaticNoInput",
+        "title": "",
+        "sub_title": "",
+        "text": "Revert Changes Placeholder",
+        "has_progress_bar": false,
+        "has_action": false,
+        "is_threaded": false,
+        "action_class": "",
+        "action_method": ""
+    },
+    "quit": {
+        "name": "quit",
+        "view_type": "StaticMenuPrompt",
+        "title": "Quit",
+        "sub_title": "",
+        "text": "Are you Sure You Wish to Quit?",
+        "has_progress_bar": false,
+        "sub_menus": ["quit_menu"],
+        "has_action": false,
+        "is_threaded": false,
+        "action_class": "",
+        "action_method": ""
+    },
+    "invalid": {
+        "name": "invalid",
+        "view_type": "StaticNoInput",
+        "title": "",
+        "sub_title": "",
+        "text": "The View you selected is invalid or has not been created yet",
+        "has_progress_bar": false,
+        "has_action": false,
+        "is_threaded": false,
+        "action_class": "",
+        "action_method": ""
+    }
+}

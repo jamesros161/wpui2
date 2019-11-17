@@ -1,0 +1,37 @@
+{
+    "Main" : [
+        [" Installations ", {"view": "get_installations"}],
+        ["   Databases   ", {"view": "databases"}],
+        ["     Themes    ", {"view": "get_themes"}],
+        ["    Plugins    ", {"view": "plugins"}],
+        ["     Users     ", {"view": "users"}],
+        ["    WP Core    ", {"view": "wp_core"}],
+        ["      Quit     ", {"view": "quit"}]
+    ],
+    "quit_menu" : [
+        [" Yes ", {"action": "exit", "action_class": "app"}],
+        ["  No ", {"action": "view_return", "action_class": "app"}]
+    ],
+    "api_response_view" : [
+        [" Close ", {"action": "close_response", "action_class": "app"}]
+    ],
+    "theme_options" : [
+        ["  Activate  ", {"action": "activate", "action_class": "themes"}],
+        ["  Uninstall ", {"action": "uninstall", "action_class": "themes"}],
+        ["   Update   ", {"action": "update", "action_class": "themes"}],
+        ["    Close   ", {"view": "list_themes"}]
+    ],
+    "list_install_headers" : [
+        ["Location", "directory"],
+        ["Home URL", "home_url"],
+        ["Valid wp_options", "valid_wp_options"],
+        ["Passed DB Check", "wp_db_check_success"],
+        ["Installation Errors", "wp_db_error"]
+    ],
+    "list_installed_themes" : [
+        ["Theme Name", "name"],
+        ["Version No.", "version"],
+        ["Status", "status"],
+        ["Theme Updates", "update"]
+    ]
+}

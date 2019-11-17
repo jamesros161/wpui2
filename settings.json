@@ -1,0 +1,139 @@
+{
+    "app": {
+        "extra": 1,
+        "temp_dir": ""
+    },
+    "logging": {
+        "level": "DEBUG",
+        "name": "wpui.log",
+        "format": "%(asctime)s.%(msecs)03d (%(levelname)s)\n    %(module)s / %(funcName)s:%(lineno)4d\n        %(message)s",
+        "datefmt": "[%m/%d/%Y] %H:%M:%S"
+    },
+    "display": {
+        "palette": [
+            [
+                "header",
+                "black",
+                "dark cyan"
+            ],
+            [
+                "default",
+                "default",
+                "default"
+            ],
+            [
+                "underline",
+                "default, underline",
+                "default"
+            ],
+            [
+                "footer",
+                "dark cyan",
+                "light gray"
+            ],
+            [
+                "body",
+                "dark cyan",
+                "default"
+            ],
+            [
+                "bold",
+                "light cyan, bold",
+                "black"
+            ],
+            [
+                "blue",
+                "bold",
+                "dark blue"
+            ],
+            [
+                "highlight",
+                "light blue",
+                "default"
+            ],
+            [
+                "alert",
+                "black",
+                "dark red"
+            ],
+            [
+                "flashing",
+                "black, blink",
+                "dark red"
+            ],
+            [
+                "boxborder",
+                "light cyan",
+                "default"
+            ],
+            [
+                "progressbar",
+                "black",
+                "dark cyan"
+            ]
+        ],
+        "legend": [
+            [
+                "Prev. Screen",
+                "Home"
+            ],
+            [
+                "Next  Screen",
+                "End"
+            ],
+            [
+                "Change Fields",
+                "← / ↑ / ↓ / →"
+            ],
+            [
+                "Move to / from Menu",
+                "Tab"
+            ],
+            [
+                "New Search",
+                "Ctrl + N"
+            ],
+            [
+                "Add / Remove Filters",
+                "Ctrl + F"
+            ],
+            [
+                "Exit",
+                "Ctrl + E"
+            ]
+        ],
+        "title": "WP-CLI Tool",
+        "sub_title": "If you can do it better, then do it",
+        "menu_enabled": "True",
+        "col_div_chars": 0,
+        "mycophagists": "A wise man once said, \"There are two kinds of mycophagists...Brave ones, and live ones....\""
+    },
+    "datetime": {
+        "date_string": "%Y%m%d%H%M%S",
+        "string_date": "%m/%d/%Y %H:%M:%S"
+    },
+    "messages": {
+        "db_not_exist": "No Database exists for this WP Installation \n Or no WP Installation selected",
+        "mycophagists": "  A wise man once said, \"There are two kinds of mycophagists...Brave ones, and live ones....\"  \n",
+        "db_export_warning": "\nWARNING!!!\n  WP-CLI Was unable to export the database!  \n  Carefully consider if it is wise to make this replacement  \n"
+    },
+    "views": {
+        "exempt_views": ["get_installations" , "list_installations", "home" , "exit", "invalid"],
+        "gatekeeper_redirect": "get_installations",
+        "gatekeeper_active": true
+    },
+    "apis" : {
+        "wpcli": {
+            "binary": "/usr/bin/wp"
+        },
+        "php": {
+            "versions": {
+                "5.6": "/opt/cpanel/ea-php56/root/usr/bin/php",
+                "7.0": "/usr/bin/php7.0",
+                "7.1": "/opt/cpanel/ea-php71/root/usr/bin/php",
+                "7.2": "/opt/cpanel/ea-php72/root/usr/bin/php",
+                "7.3": "/opt/cpanel/ea-php73/root/usr/bin/php"
+            }
+        }
+    }
+}
